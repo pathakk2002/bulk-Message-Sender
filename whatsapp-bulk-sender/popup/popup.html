@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Bulk Message Sender</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp Bulk Message Sender</h1>
+        <div class="tabs">
+            <button class="tab-button active" id="home-tab">Home</button>
+            <button class="tab-button" id="settings-tab">Settings</button>
+        </div>
+
+        <!-- Home Tab -->
+        <div class="tab-content" id="home-content">
+            <h2>Send Bulk WhatsApp Messages</h2>
+            <label for="csv-file">Numbers (CSV):</label>
+            <input type="file" id="csv-file" accept=".csv">
+            <button id="download-sample">Download Sample CSV</button>
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Enter your message here..."></textarea>
+
+            <label for="media-file">Attach Media (optional):</label>
+            <input type="file" id="media-file" accept="image/*,video/*,application/pdf">
+            <button id="send-btn">Send Messages</button>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-content" id="settings-content">
+            <h2>Settings</h2>
+            <label for="send-delay">Message Send Interval (seconds):</label>
+            <input type="number" id="send-delay" value="1" min="1">
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
